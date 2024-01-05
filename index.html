@@ -1,33 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vinyl Mağazası</title>
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vinyl Shop</title>
+
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <header class="bg-dark text-white text-center py-4">
-        <h1>Vinyl Mağazası</h1>
-        <div id="user-info" class="mt-2"></div>
-        <div id="cart-info" class="mt-2"></div>
+      <h1>Vinyl Shop</h1>
+      <div id="user-info" class="mt-2"></div>
+      <div id="cart-info" class="mt-2"></div>
     </header>
     <section class="text-center my-4">
-        <input type="text" id="searchInput" class="form-control d-inline-block w-75" placeholder="Ürün Ara">
-        <button onclick="searchProduct()" class="btn btn-primary">Ara</button>
+      <input
+        type="text"
+        id="searchInput"
+        class="form-control d-inline-block w-75"
+        placeholder="Search For Product"
+      />
+      <button onclick="searchProduct()" class="btn btn-primary">Search</button>
     </section>
     <section id="products" class="d-flex flex-wrap justify-content-around p-4">
-        <!-- Ürünleri buraya ekleyin -->
+      <div class="product" id="1">
+        <img
+          src="https://images.stockx.com/images/Dua-Lipa-Future-Nostalgia-Boxset-12-Vinyl.jpg?fit=fill&bg=FFFFFF&w=1200&h=857&fm=jpg&auto=compress&dpr=2&trim=color&updated_at=1617350797&q=60"
+          width="250px"
+          height="250px"
+        />
+        <br />
+        <p class="productname">
+          Dua Lipa - Future Nostalgia Album Colored Vinyl
+        </p>
+        <p>Price: $20.99</p>
+        <button onclick="addToCart(1)">Add to Cart</button>
+      </div>
+      <div class="product" id="2">
+        <img
+          src="https://ukshop.rayeofficial.com/cdn/shop/products/M21CB_Vinyl_D2C_Full.png?v=1665144047"
+          width="250px"
+          height="250px"
+        />
+        <br />
+        <p class="productname">
+          Raye - My 21st Century Blues Album Colored Vinyl
+        </p>
+        <p>Price: $30.49</p>
+        <button onclick="addToCart(2)">Add to Cart</button>
+      </div>
+      <div class="product" id="3">
+        <img
+          src="https://www.turntablelab.com/cdn/shop/files/oliviarodrigo-guts-coloredvinyl-2_1000x1000.jpg?v=1694710642"
+          width="250px"
+          height="250px"
+        />
+        <br />
+        <p class="productname">Olivia Rodrigo - Guts Album Colored Vinyl</p>
+        <p>Price: $15.99</p>
+        <button onclick="addToCart(3)">Add to Cart</button>
+      </div>
     </section>
-    <button onclick="promptForProduct()" class="btn btn-success">Yeni Ürün Ekle</button>
-    <button onclick="promptForLogin()" class="btn btn-info">Oturum Aç</button>
-    <button onclick="logout()" class="btn btn-danger">Oturumu Kapat</button>
-    <!-- Bootstrap JS ve Popper.js -->
+    <button onclick="promptForProduct()" class="btn btn-success">
+      Add New Product
+    </button>
+    <button onclick="promptForLogin()" class="btn btn-info">Log In</button>
+    <button onclick="logout()" class="btn btn-danger">Log Out</button>
+
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
